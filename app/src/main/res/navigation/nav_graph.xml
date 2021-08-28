@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/formPage1"
+        android:name="com.example.tekkr_assignment.Fragments.FormPage1"
+        android:label="fragment_form_page1"
+        tools:layout="@layout/fragment_form_page1" >
+        <action
+            android:id="@+id/action_formPage1_to_formPage2"
+            app:destination="@id/formPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/formPage2"
+        android:name="com.example.tekkr_assignment.Fragments.FormPage2"
+        android:label="fragment_form_page2"
+        tools:layout="@layout/fragment_form_page2" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.tekkr_assignment.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_formPage1"
+            app:destination="@id/formPage1" />
+        <action
+            android:id="@+id/action_homeFragment_to_ordersPage1"
+            app:destination="@id/ordersPage1" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersPage1"
+        android:name="com.example.tekkr_assignment.Fragments.OrdersPage1"
+        android:label="fragment_orders_page1"
+        tools:layout="@layout/fragment_orders_page1"
+        app:startDestination="@id/action_ordersPage1_to_ordersPage2">
+        <action
+            android:id="@+id/action_ordersPage1_to_ordersPage2"
+            app:destination="@id/ordersPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersPage2"
+        android:name="com.example.tekkr_assignment.Fragments.OrdersPage2"
+        android:label="fragment_orders_page2"
+        tools:layout="@layout/fragment_orders_page2" />
+</navigation>
